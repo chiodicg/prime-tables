@@ -1,15 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
   const tableForm = document.querySelector("#generate-table")
   tableForm.addEventListener("submit", generateTable)
+  let inputNumber = null
   let primeArray = []
   let multipliedPrimes = []
+  const table = document.getElementById("table")
+  let cell = null
+  let row = null
 
     //Generating the prime multiplication table
   function generateTable(event) {
     event.preventDefault()
-    let inputNumber = parseInt(document.querySelector('#input-number').value)
+    inputNumber = parseInt(document.querySelector('#input-number').value)
     generatePrimeArray(inputNumber)
     multiplyPrime(primeArray)
+    clearTable()
     displayTable(multipliedPrimes)
   }
 
@@ -57,9 +62,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   //Display the multiplication table
-  function displayTable() {
+  function displayTable(multipliedPrimes) {
+    for (let index = 0; index < multipliedPrimes.length; index++) {
+      let element = multipliedPrimes[index]
+      row = document.createElement("tr");
+      for (let index = 0; index < element.length; index++) {
+        cell = document.createElement("td");
+        cell.textContent = element[index]
+        row.appendChild(cell)
+      }
+      table.appendChild(row)
+      table.setAttribute("width", "50%")
+    }
   }
 
-
-
+  //Check if there is another table displayed and clears it
+  function clearTable() {
+    if (table.hasChildNodes()) {
+      table.innerHTML = ''
+    }
+  }
 })

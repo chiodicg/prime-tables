@@ -15,3 +15,18 @@ button {
   padding: 12px 25px;
   font-weight: bold;
 }
+
+#table {
+  margin: 20px auto;
+  width: 50%;
+}
+
+td {
+  max-width: 5%;
+}
+
+table,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
