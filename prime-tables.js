@@ -34,17 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (n <= 1) {
       return false
     } else if (n > 2) {
-      for(let i = 2; i < n; i++) {
+      for (let i = 2; i < n; i++) {
         if (n % i === 0) {
           return false
-        } else {
-          return true
-        }
-      }
-    } else {
+        }}
+	    return true
+	  } else {
       return true
     }
   }
+
 
   //Multiplication of the N primes
   function multiplyPrime() {
@@ -58,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       multipliedPrimes.push(nextRow)
     })
-    console.log(multipliedPrimes)
   }
 
   //Display the multiplication table
