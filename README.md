@@ -20,4 +20,4 @@ Type an input number (N) and the app will display a multiplication table of N pr
 
 - I want to improve the design of the app and how the table is displayed when using larger N numbers;
 - I intend to make it responsive to smaller screens;
-- I am going to learn about testing and applying it here. I have never done any proper testing before, I was testing my code using console.log, console.error and debugger. I need to learn how to do unit testing, TDD/BDD. Also, I recently heard about Cypress, Jest and Mocha and I am curious to try them.
+- I am going to learn about testing and apply it here. I was testing my code using console.log, console.error and debugger. I need to learn how to do unit testing, TDD/BDD. Also, I recently heard about Cypress, Jest and Mocha and I am curious to try them.
